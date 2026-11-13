@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNDARY - Scorecard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏏 BOUNDARY</h1>
+        <p>Match Scorecard</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2 id="scorecardMatchInfo">Match Scorecard</h2>
+            <p id="matchResult">Match in progress</p>
+        </section>
+
+        <section class="score-card">
+            <h2>First Innings</h2>
+            <h1 id="firstInningsTotal">0/0</h1>
+            <p id="firstInningsOvers">Overs: 0.0</p>
+            <div id="firstBattingSummary"></div>
+            <div id="firstBowlingSummary"></div>
+        </section>
+
+        <section class="score-card">
+            <h2>Second Innings</h2>
+            <h1 id="secondInningsTotal">0/0</h1>
+            <p id="secondInningsOvers">Overs: 0.0</p>
+            <div id="secondBattingSummary"></div>
+            <div id="secondBowlingSummary"></div>
+            <p id="scorecardTarget"></p>
+        </section>
+
+        <button onclick="window.location.href='live-scoring.html'">
+            ← Back to Live Scoring
+        </button>
+
+        <button class="back-button"
+                onclick="window.location.href='homepage.html'">
+            Back to Home
+        </button>
+    </main>
+
+    <footer><p>BOUNDARY © 2026</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

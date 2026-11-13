@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNDARY - Live Scoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏏 BOUNDARY</h1>
+        <p>Live Match Scoring</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2 id="battingTeamName">Batting Team</h2>
+            <p id="matchInfo">Live Match</p>
+        </section>
+
+        <section class="setup-form">
+    <h2>Opening Players</h2>
+
+    <label for="striker">Striker</label>
+    <select id="striker"></select>
+
+    <label for="nonStriker">Non-Striker</label>
+    <select id="nonStriker"></select>
+
+    <label for="openingBowler">Opening Bowler</label>
+    <select id="openingBowler"></select>
+
+    <button onclick="confirmOpeningPlayers()">
+        Confirm Players
+    </button>
+
+    <p id="openingStatus">Select your opening players.</p>
+</section>
+<section class="setup-form" id="playingPlayers">
+    <h2>At the Crease</h2>
+
+    <p>🏏 Striker: <strong id="currentStriker">Not selected</strong></p>
+
+    <p>Non-Striker: <strong id="currentNonStriker">Not selected</strong></p>
+
+    <p>Bowler: <strong id="currentBowler">Not selected</strong></p>
+</section>
+        <section class="score-card">
+    <p class="score-label">CURRENT SCORE</p>
+    <h1 id="totalScore">0/0</h1>
+    <p id="oversDisplay">Overs: 0.0</p>
+    <p id="runRate">Run Rate: 0.00</p>
+
+    <div id="targetInfo" style="display:none;">
+        <hr>
+        <p id="targetDisplay">Target: 0</p>
+        <h2 id="runsNeeded">Runs Needed: 0</h2>
+        <p id="ballsRemaining">Balls Remaining: 0</p>
+    </div>
+</section>
+
+        <section class="setup-form">
+            <h2>Runs</h2>
+            <div class="scoring-buttons">
+                <button onclick="addRuns(0)">0</button>
+                <button onclick="addRuns(1)">1</button>
+                <button onclick="addRuns(2)">2</button>
+                <button onclick="addRuns(3)">3</button>
+                <button onclick="addRuns(4)">4</button>
+                <button onclick="addRuns(6)">6</button>
+            </div>
+
+            <h2>Extras</h2>
+            <div class="scoring-buttons">
+                <button onclick="addExtra('wide')">Wide</button>
+                <button onclick="addExtra('noBall')">No Ball</button>
+                <button onclick="addExtra('bye')">Bye</button>
+                <button onclick="addExtra('legBye')">Leg Bye</button>
+            </div>
+
+            <h2>Wicket</h2>
+            <button class="wicket-button" onclick="addWicket()">
+                + WICKET
+            </button>
+
+            <button class="back-button" onclick="undoBall()">
+                ↶ Undo Last Ball
+            </button>
+        </section>
+
+        <section class="setup-form">
+            <h2>Recent Deliveries</h2>
+            <ul id="ballHistory">
+                <li>No deliveries yet.</li>
+            </ul>
+
+        </section>
+       <button onclick="window.location.href='scorecard.html'">
+    View Full Scorecard →
+</button>
+    </main>
+
+    <footer><p>BOUNDARY © 2026</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

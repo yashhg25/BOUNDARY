@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNDARY - Player Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏏 BOUNDARY</h1>
+        <p>Set Up Your Players</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2 id="matchTitle">Player Setup</h2>
+            <p>Add players to both teams.</p>
+        </section>
+
+        <section class="setup-form">
+            <h2 id="teamAHeading">Team A</h2>
+            <div class="player-entry">
+                <input type="text" id="playerAName"
+                       placeholder="Enter player name">
+                <button onclick="addPlayer('A')">+ Add Player</button>
+            </div>
+            <ul id="teamAList"></ul>
+
+            <h2 id="teamBHeading">Team B</h2>
+            <div class="player-entry">
+                <input type="text" id="playerBName"
+                       placeholder="Enter player name">
+                <button onclick="addPlayer('B')">+ Add Player</button>
+            </div>
+            <ul id="teamBList"></ul>
+
+            <button onclick="finishPlayerSetup()">
+                Continue to Toss →
+            </button>
+
+            <button class="back-button"
+                    onclick="window.location.href='new match.html'">
+                ← Back to Match Setup
+            </button>
+        </section>
+    </main>
+
+    <footer><p>BOUNDARY © 2026</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

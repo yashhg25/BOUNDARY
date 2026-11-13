@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNDARY - Player Profiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏏 BOUNDARY</h1>
+        <p>Player Profiles</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>My Cricket Players</h2>
+            <p>Manage players and track their career records.</p>
+        </section>
+
+        <section class="setup-form">
+            <h2>Add New Player</h2>
+
+            <label for="newPlayerName">Player Name</label>
+            <input type="text" id="newPlayerName"
+                   placeholder="Enter player name">
+
+            <button onclick="savePlayer()">+ Add Player</button>
+
+            <h2>Registered Players</h2>
+
+            <ul id="registeredPlayersList">
+                <li>No players registered yet.</li>
+            </ul>
+        </section>
+
+        <button class="back-button"
+                onclick="window.location.href='homepage.html'">
+            ← Back to Home
+        </button>
+    </main>
+
+    <footer><p>BOUNDARY © 2026</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

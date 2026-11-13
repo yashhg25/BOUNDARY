@@ -1,0 +1,523 @@
+
+/* =================================
+   BOUNDARY - CRICKET SCORING WEBSITE
+   Orange + Light Green Theme
+   ================================= */
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Stadium Background */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263528;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 25, 15, 0.65),
+            rgba(15, 25, 15, 0.75)
+        ),
+        url("images/stadium.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 140, 66, 0.95),
+        rgba(255, 173, 96, 0.95)
+    );
+
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+
+    border-radius: 0 0 25px 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* Main Content */
+
+main {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+/* Welcome Section */
+
+.welcome {
+    text-align: center;
+
+    background: rgba(227, 244, 206, 0.92);
+
+    padding: 25px 15px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.welcome h2 {
+    color: #e87527;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.welcome p {
+    color: #52634c;
+    font-size: 15px;
+}
+
+/* Menu Buttons */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu button {
+    background: rgba(255, 255, 255, 0.93);
+
+    border: 2px solid #b8dc91;
+    border-radius: 14px;
+
+    padding: 18px;
+
+    font-size: 17px;
+    font-weight: bold;
+    color: #354b32;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Start Match Button */
+
+.menu button:first-child {
+    background: #ff914d;
+    color: white;
+    border: none;
+}
+
+/* Button Hover Effect */
+
+.menu button:hover {
+    background: #d8efbd;
+    transform: translateY(-3px);
+}
+
+.menu button:first-child:hover {
+    background: #ed792d;
+}
+
+/* Recent Matches */
+
+.recent {
+    background: rgba(255, 255, 255, 0.93);
+
+    padding: 22px;
+    margin-top: 30px;
+
+    border-radius: 18px;
+    border-left: 6px solid #ff914d;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(5px);
+}
+
+.recent h2 {
+    color: #e87527;
+    margin-bottom: 15px;
+}
+
+.recent p {
+    color: #687b61;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Footer */
+
+footer {
+    background: rgba(217, 237, 196, 0.95);
+
+    color: #40533a;
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Mobile Responsive Design */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    .welcome {
+        padding: 22px 12px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .menu button {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .recent {
+        padding: 18px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* MATCH SETUP PAGE */
+
+.setup-form {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 20px;
+}
+
+.setup-form h2 {
+    color: #e87527;
+    margin: 20px 0 15px;
+}
+
+.setup-form h2:first-child {
+    margin-top: 0;
+}
+
+.setup-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #354b32;
+}
+
+.setup-form input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #b8dc91;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.setup-form input:focus {
+    border-color: #ff914d;
+}
+
+.setup-form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #ff914d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.setup-form button:hover {
+    background: #ed792d;
+}
+
+.setup-form .back-button {
+    background: #d9edc4;
+    color: #354b32;
+}
+
+/* PLAYER SETUP PAGE */
+.player-entry {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.player-entry input {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-entry button {
+    width: auto;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+#teamAList, #teamBList {
+    padding-left: 25px;
+    margin: 15px 0 25px;
+}
+
+#teamAList li, #teamBList li {
+    padding: 8px;
+    margin-bottom: 6px;
+    background: #e3f4ce;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 450px) {
+    .player-entry {
+        flex-direction: column;
+    }
+
+    .player-entry button {
+        width: 100%;
+    }
+}
+
+/* TOSS PAGE */
+.setup-form select {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    border: 2px solid #b8dc91;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+    color: #263528;
+}
+
+#matchSummary {
+    background: #e3f4ce;
+    padding: 12px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+/* LIVE SCORING PAGE */
+
+.score-card {
+    background: #e3f4ce;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.score-label {
+    font-weight: bold;
+    color: #536b45;
+}
+
+#totalScore {
+    font-size: 48px;
+    color: #263528;
+    margin: 10px 0;
+}
+
+#oversDisplay, #runRate {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.scoring-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.scoring-buttons button {
+    width: 100%;
+    margin: 0;
+    padding: 18px 8px;
+}
+
+.wicket-button {
+    background: #d9534f !important;
+}
+
+#ballHistory {
+    padding-left: 25px;
+}
+
+#ballHistory li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #e3f4ce;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 450px) {
+    #totalScore {
+        font-size: 40px;
+    }
+}
+
+/* SCORECARD PAGE */
+
+#battingSummary, #bowlingSummary {
+    background: #e3f4ce;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.score-card {
+    margin-bottom: 20px;
+}
+
+
+#savedTeamsList li {
+    background: #e3f4ce;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* PLAYER PROFILES PAGE */
+
+#registeredPlayersList {
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+#registeredPlayersList li {
+    background: #e3f4ce;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* SERIES MANAGEMENT PAGE */
+
+#savedSeriesList {
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+#savedSeriesList li {
+    background: #e3f4ce;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* SERIES DASHBOARD */
+
+#seriesStandings {
+    background: #e3f4ce;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+#seriesMatchResults {
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+#seriesMatchResults li {
+    background: #e3f4ce;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* OPENING PLAYER SELECTION */
+
+.setup-form select {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 2px solid #b8dc91;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+#teamAList li,
+#teamBList li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+#teamAList li button,
+#teamBList li button {
+    padding: 4px 9px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+}
+
+#teamAList li button:first-of-type,
+#teamBList li button:first-of-type {
+    background: #e8f1ff;
+    color: #2463a6;
+}
+
+#teamAList li button:last-of-type,
+#teamBList li button:last-of-type {
+    background: #ffe8e8;
+    color: #c0392b;
+}

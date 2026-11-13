@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOUNDARY - Cricket Scoring</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏏 BOUNDARY</h1>
+        <p>Cricket. Made Simple.</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>Welcome to BOUNDARY</h2>
+            <p>Your personal cricket scoring system.</p>
+        </section>
+
+        <section class="menu">
+
+            <button onclick="startMatch()">
+                + Start New Match
+            </button>
+
+            <button onclick="showTeams()">
+                My Teams
+            </button>
+
+            <button onclick="showPlayers()">
+                Player Profiles
+            </button>
+
+            <button onclick="showSeries()">
+                My Series
+            </button>
+
+            <button onclick="showHistory()">
+                Match History
+            </button>
+
+        </section>
+
+        <section class="recent">
+            <h2>Recent Matches</h2>
+            <p id="recentMatches">
+                No matches recorded yet.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>BOUNDARY © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

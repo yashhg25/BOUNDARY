@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOUNDARY - Match Setup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏏 BOUNDARY</h1>
+        <p>Set Up Your Match</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>New Match Setup</h2>
+            <p>Enter your match details below.</p>
+        </section>
+
+        <section class="setup-form">
+
+            <h2>Match Details</h2>
+
+            <label>Match Name (Optional)</label>
+            <input type="text" id="matchName"
+                   placeholder="Example: Sunday Tournament">
+
+            <label>Match Date</label>
+            <input type="date" id="matchDate">
+
+            <label>Ground Name</label>
+            <input type="text" id="groundName"
+                   placeholder="Enter ground name">
+
+            <h2>Teams</h2>
+
+            <label>Team A Name</label>
+            <input type="text" id="teamA"
+                   placeholder="Enter first team name">
+
+            <label>Team B Name</label>
+            <input type="text" id="teamB"
+                   placeholder="Enter second team name">
+
+            <h2>Match Rules</h2>
+
+            <label>Number of Overs</label>
+            <input type="number" id="overs"
+                   min="1" placeholder="Example: 8">
+
+            <label>Players Per Team</label>
+            <input type="number" id="players"
+                   min="1" placeholder="Example: 7">
+
+            <button onclick="continueSetup()">
+                Continue to Player Setup →
+            </button>
+
+            <button class="back-button"
+                    onclick="window.location.href='homepage.html'">
+                ← Back to Home
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>BOUNDARY © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
